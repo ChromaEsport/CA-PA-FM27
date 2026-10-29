@@ -93,3 +93,68 @@ footer span:first-child { color: #9aa7b8; font-weight: 800; letter-spacing: 1px;
   .heading-actions { width: 100%; }
   .button { flex: 1; }
 }
+
+/* Disposition calculateur + liste des joueurs */
+.main-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.player-list-panel {
+  background: #191f29;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+.player-list-panel h2 {
+  margin-top: 0;
+  color: #8fecc9;
+}
+
+.saved-players {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.saved-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #10151d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.saved-player:hover {
+  border-color: #8fecc9;
+}
+
+.saved-player-name {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.saved-player-ca {
+  color: #8fecc9;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .player-list-panel {
+    position: static;
+  }
+}

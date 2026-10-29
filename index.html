@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151d">
+  <title>FM26 CA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FM26 CA Calculator, accueil">
+      <span class="brand-mark">FM</span>
+      <span><strong>FM26</strong><small>CA CALCULATOR</small></span>
+    </a>
+    <span class="top-pill"><span class="live-dot"></span> CALCULATEUR NON OFFICIEL</span>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">PLAYER ANALYSIS / 2026</div>
+      <h1>Estime la <span>CA</span> de ton joueur.</h1>
+      <p>Renseigne les attributs visibles dans Football Manager, choisis le poste et obtiens un indice estimatif adapté au profil.</p>
+    </section>
+
+    <section class="player-card">
+      <div class="player-fields">
+        <label class="field">
+          <span>Nom du joueur <em>FACULTATIF</em></span>
+          <input id="playerName" type="text" placeholder="Ex. Kylian Mbappé" maxlength="60">
+        </label>
+        <label class="field">
+          <span>Poste de référence</span>
+          <select id="position">
+            <option value="gk">Gardien de but</option>
+            <option value="dc">Défenseur central</option>
+            <option value="dl">Latéral / piston</option>
+            <option value="mdf">Milieu défensif</option>
+            <option value="mc" selected>Milieu central</option>
+            <option value="mo">Milieu offensif</option>
+            <option value="ailier">Ailier</option>
+            <option value="attaquant">Attaquant</option>
+          </select>
+        </label>
+        <label class="field compact">
+          <span>Âge <em>FACULTATIF</em></span>
+          <input id="playerAge" type="number" min="15" max="50" placeholder="24">
+        </label>
+      </div>
+      <div class="card-note"><span class="info-icon">i</span> Utilise les notes affichées dans le jeu, de 1 à 20. Les champs laissés vides ne sont pas pris en compte.</div>
+    </section>
+
+    <section class="result-card" aria-live="polite">
+      <div class="result-main">
+        <div class="result-label">INDICE DE CA ESTIMÉ</div>
+        <div class="result-number"><span id="caValue">—</span><small>/ 200</small></div>
+        <div class="result-caption" id="resultCaption">Renseigne les attributs pour lancer l'estimation.</div>
+      </div>
+      <div class="result-side">
+        <div class="meter"><div id="meterFill"></div></div>
+        <div class="meter-labels"><span>0</span><span>100</span><span>200</span></div>
+        <div class="result-stats">
+          <div><span>Attributs saisis</span><strong id="filledCount">0 / 48</strong></div>
+          <div><span>Moyenne prise en compte</span><strong id="averageValue">— / 20</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="attributes-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">PLAYER ATTRIBUTES</div><h2>Attributs du joueur</h2></div>
+        <div class="heading-actions">
+          <button class="button button-quiet" id="fillTen" type="button">Tout mettre à 10</button>
+          <button class="button button-outline" id="reset" type="button">Réinitialiser</button>
+        </div>
+      </div>
+      <div id="attributes"></div>
+    </section>
+
+    <section class="method-note">
+      <strong>À propos du résultat</strong>
+      <p>Cette page fournit une estimation indicative, pas la CA officielle calculée par le moteur de Football Manager 2026. La formule exacte et les pondérations officielles utilisées par FM26 ne sont pas confirmées ici. Le résultat est basé sur une pondération indicative des attributs selon le poste sélectionné ; il ne doit pas être interprété comme une valeur exacte du jeu. L’âge et le potentiel (PA) ne sont pas utilisés dans le calcul.</p>
+    </section>
+
+    <footer>
+      <span>FM26 CA CALCULATOR</span>
+      <span>Projet communautaire indépendant · Non affilié à Sports Interactive ou SEGA</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

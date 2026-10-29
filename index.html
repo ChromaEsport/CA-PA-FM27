@@ -17,6 +17,8 @@
   </header>
 
   <main class="page">
+    <div class="app-layout">
+  <div class="calculator">
     <section class="hero">
       <div class="eyebrow">PLAYER ANALYSIS / 2026</div>
       <h1>Estime la <span>CA</span> de ton joueur.</h1>
@@ -76,7 +78,30 @@
       </div>
       <div id="attributes"></div>
     </section>
+  </div>
 
+  <aside class="saved-players">
+    <div class="saved-header">
+      <div>
+        <span class="eyebrow">MA BASE DE DONNÉES</span>
+        <h2>Mes joueurs</h2>
+      </div>
+      <strong id="savedCount">0</strong>
+    </div>
+
+    <p class="saved-description">
+      Enregistre tes joueurs pour retrouver leur CA estimée.
+    </p>
+
+    <div class="save-player-form">
+      <button id="savePlayer" type="button">+ Enregistrer le joueur</button>
+    </div>
+
+    <div id="savedPlayersList" class="saved-players-list">
+      <p class="empty-players">Aucun joueur enregistré pour le moment.</p>
+    </div>
+  </aside>
+</div>
     <section class="method-note">
       <strong>À propos du résultat</strong>
       <p>Cette page fournit une estimation indicative, pas la CA officielle calculée par le moteur de Football Manager 2026. La formule exacte et les pondérations officielles utilisées par FM26 ne sont pas confirmées ici. Le résultat est basé sur une pondération indicative des attributs selon le poste sélectionné ; il ne doit pas être interprété comme une valeur exacte du jeu. L’âge et le potentiel (PA) ne sont pas utilisés dans le calcul.</p>

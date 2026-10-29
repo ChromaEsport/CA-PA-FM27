@@ -17,8 +17,8 @@
   </header>
 
   <main class="page">
-    <div class="app-layout">
-  <div class="calculator">
+    <div class="main-layout">
+  <div class="calculator-column">
     <section class="hero">
       <div class="eyebrow">PLAYER ANALYSIS / 2026</div>
       <h1>Estime la <span>CA</span> de ton joueur.</h1>
@@ -80,27 +80,18 @@
     </section>
   </div>
 
-  <aside class="saved-players">
-    <div class="saved-header">
-      <div>
-        <span class="eyebrow">MA BASE DE DONNÉES</span>
-        <h2>Mes joueurs</h2>
-      </div>
-      <strong id="savedCount">0</strong>
     </div>
 
-    <p class="saved-description">
-      Enregistre tes joueurs pour retrouver leur CA estimée.
+  <aside class="player-list-panel">
+    <h2>Joueurs enregistrés</h2>
+
+    <p id="emptyPlayersMessage">
+      Aucun joueur enregistré pour le moment.
     </p>
 
-    <div class="save-player-form">
-      <button id="savePlayer" type="button">+ Enregistrer le joueur</button>
-    </div>
-
-    <div id="savedPlayersList" class="saved-players-list">
-      <p class="empty-players">Aucun joueur enregistré pour le moment.</p>
-    </div>
+    <div id="savedPlayers" class="saved-players"></div>
   </aside>
+</div>
 </div>
     <section class="method-note">
       <strong>À propos du résultat</strong>
